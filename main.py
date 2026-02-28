@@ -52,3 +52,6 @@ async def analyze_comment(data: CommentRequest):
     )
 
     return response.output_parsed
+@app.get("/comment")
+async def comment_info():
+    return {"message": "Use POST with JSON body { \"comment\": \"your text\" }"}
